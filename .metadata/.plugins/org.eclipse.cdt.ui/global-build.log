@@ -1,0 +1,243 @@
+08:16:19 **** Rebuild of configuration Debug for project Pessoa ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.cpp" 
+In file included from ..\src\main.cpp:10:0:
+..\src\Pessoa.h:35:17: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   short idade = 0;
+                 ^
+..\src\Pessoa.h:36:18: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   float altura = 0;
+                  ^
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pessoa.o" "..\\src\\Pessoa.cpp" 
+In file included from ..\src\Pessoa.cpp:10:0:
+..\src\Pessoa.h:35:17: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   short idade = 0;
+                 ^
+..\src\Pessoa.h:36:18: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   float altura = 0;
+                  ^
+..\src\Pessoa.cpp:12:8: error: expected unqualified-id before 'char'
+ Pessoa(char* n){
+        ^
+..\src\Pessoa.cpp:12:8: error: expected ')' before 'char'
+..\src\Pessoa.cpp:15:8: error: expected unqualified-id before 'char'
+ Pessoa(char* n, short i){
+        ^
+..\src\Pessoa.cpp:15:8: error: expected ')' before 'char'
+..\src\Pessoa.cpp:19:8: error: expected unqualified-id before 'char'
+ Pessoa(char* n, short i, float a){
+        ^
+..\src\Pessoa.cpp:19:8: error: expected ')' before 'char'
+..\src\Pessoa.cpp: In function 'void setIdade(short int)':
+..\src\Pessoa.cpp:26:2: error: 'idade' was not declared in this scope
+  idade = i;
+  ^
+..\src\Pessoa.cpp: In function 'void setAltura(float)':
+..\src\Pessoa.cpp:29:2: error: 'altura' was not declared in this scope
+  altura = a;
+  ^
+08:30:36 **** Incremental Build of configuration Debug for project Pessoa ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.cpp" 
+In file included from ..\src\main.cpp:10:0:
+..\src\Pessoa.h:35:17: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   short idade = 0;
+                 ^
+..\src\Pessoa.h:36:18: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   float altura = 0;
+                  ^
+..\src\main.cpp: In function 'int main()':
+..\src\main.cpp:16:4: error: invalid use of 'Pessoa::Pessoa'
+  p.Pessoa(c);
+    ^
+08:38:47 **** Incremental Build of configuration Debug for project Pessoa ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pessoa.o" "..\\src\\Pessoa.cpp" 
+In file included from ..\src\Pessoa.cpp:10:0:
+..\src\Pessoa.h:35:17: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   short idade = 0;
+                 ^
+..\src\Pessoa.h:36:18: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   float altura = 0;
+                  ^
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.cpp" 
+In file included from ..\src\main.cpp:10:0:
+..\src\Pessoa.h:35:17: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   short idade = 0;
+                 ^
+..\src\Pessoa.h:36:18: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   float altura = 0;
+                  ^
+g++ -o Pessoa.exe "src\\Pessoa.o" "src\\main.o" 
+src\main.o: In function `main':
+C:\Users\Leonardo D. Batista\Desktop\workspace-cpp\Pessoa\Debug/../src/main.cpp:16: undefined reference to `Pessoa::~Pessoa()'
+C:\Users\Leonardo D. Batista\Desktop\workspace-cpp\Pessoa\Debug/../src/main.cpp:14: undefined reference to `Pessoa::~Pessoa()'
+C:\Users\Leonardo D. Batista\Desktop\workspace-cpp\Pessoa\Debug/../src/main.cpp:14: undefined reference to `Pessoa::~Pessoa()'
+collect2.exe: error: ld returned 1 exit status
+08:41:00 **** Incremental Build of configuration Debug for project Pessoa ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.cpp" 
+In file included from ..\src\main.cpp:10:0:
+..\src\Pessoa.h:35:17: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   short idade = 0;
+                 ^
+..\src\Pessoa.h:36:18: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   float altura = 0;
+                  ^
+..\src\main.cpp: In function 'int main()':
+..\src\main.cpp:16:12: error: cannot call constructor 'Pessoa::Pessoa' directly
+  p.Pessoa::Pessoa(c);
+            ^
+08:41:31 **** Incremental Build of configuration Debug for project Pessoa ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.cpp" 
+In file included from ..\src\main.cpp:10:0:
+..\src\Pessoa.h:35:17: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   short idade = 0;
+                 ^
+..\src\Pessoa.h:36:18: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   float altura = 0;
+                  ^
+..\src\main.cpp: In function 'int main()':
+..\src\main.cpp:16:22: error: cannot call constructor 'Pessoa::Pessoa' directly [-fpermissive]
+  p = Pessoa::Pessoa(c);
+                      ^
+..\src\main.cpp:16:22: note: for a function-style cast, remove the redundant '::Pessoa'
+08:42:06 **** Incremental Build of configuration Debug for project Pessoa ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.cpp" 
+In file included from ..\src\main.cpp:10:0:
+..\src\Pessoa.h:35:17: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   short idade = 0;
+                 ^
+..\src\Pessoa.h:36:18: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   float altura = 0;
+                  ^
+..\src\main.cpp: In function 'int main()':
+..\src\main.cpp:16:10: error: conflicting declaration 'Pessoa c'
+  Pessoa(c);
+          ^
+..\src\main.cpp:15:7: note: previous declaration as 'char c [9]'
+  char c[] = "Leonardo";
+       ^
+..\src\main.cpp:15:7: warning: unused variable 'c' [-Wunused-variable]
+08:42:38 **** Incremental Build of configuration Debug for project Pessoa ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.cpp" 
+In file included from ..\src\main.cpp:10:0:
+..\src\Pessoa.h:35:17: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   short idade = 0;
+                 ^
+..\src\Pessoa.h:36:18: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   float altura = 0;
+                  ^
+..\src\main.cpp: In function 'int main()':
+..\src\main.cpp:16:2: error: 'essoa' is not a member of 'Pessoa'
+  Pessoa::essoa(c);
+  ^
+08:42:42 **** Incremental Build of configuration Debug for project Pessoa ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.cpp" 
+In file included from ..\src\main.cpp:10:0:
+..\src\Pessoa.h:35:17: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   short idade = 0;
+                 ^
+..\src\Pessoa.h:36:18: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   float altura = 0;
+                  ^
+..\src\main.cpp: In function 'int main()':
+..\src\main.cpp:16:18: error: cannot call constructor 'Pessoa::Pessoa' directly [-fpermissive]
+  Pessoa::Pessoa(c);
+                  ^
+..\src\main.cpp:16:18: note: for a function-style cast, remove the redundant '::Pessoa'
+08:48:39 **** Incremental Build of configuration Debug for project Pessoa ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pessoa.o" "..\\src\\Pessoa.cpp" 
+In file included from ..\src\Pessoa.cpp:10:0:
+..\src\Pessoa.h:35:17: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   short idade = 0;
+                 ^
+..\src\Pessoa.h:36:18: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   float altura = 0;
+                  ^
+..\src\Pessoa.cpp:12:1: error: prototype for 'Pessoa::Pessoa()' does not match any in class 'Pessoa'
+ Pessoa::Pessoa(){};
+ ^
+In file included from ..\src\Pessoa.cpp:10:0:
+..\src\Pessoa.h:14:7: error: candidates are: Pessoa::Pessoa(const Pessoa&)
+ class Pessoa {
+       ^
+..\src\Pessoa.h:21:3: error:                 Pessoa::Pessoa(char*, short int, float)
+   Pessoa(char* n, short i, float a); // construtor alternativo
+   ^
+..\src\Pessoa.h:20:3: error:                 Pessoa::Pessoa(char*, short int)
+   Pessoa(char* n, short i); // construtor alternativo
+   ^
+..\src\Pessoa.h:19:3: error:                 Pessoa::Pessoa(char*)
+   Pessoa(char* n); // construtor alternativo
+   ^
+08:56:16 **** Incremental Build of configuration Debug for project Pessoa ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pessoa.o" "..\\src\\Pessoa.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.cpp" 
+..\src\main.cpp: In function 'int main()':
+..\src\main.cpp:16:4: error: invalid use of 'Pessoa::Pessoa'
+  p.Pessoa(c);
+    ^
+08:56:56 **** Incremental Build of configuration Debug for project Pessoa ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.cpp" 
+..\src\main.cpp: In function 'int main()':
+..\src\main.cpp:16:4: error: invalid use of 'Pessoa::Pessoa'
+  p.Pessoa(c,4);
+    ^
+08:58:04 **** Incremental Build of configuration Debug for project Pessoa ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.cpp" 
+..\src\main.cpp: In function 'int main()':
+..\src\main.cpp:16:10: error: conflicting declaration 'Pessoa c'
+  Pessoa(c);
+          ^
+..\src\main.cpp:15:7: note: previous declaration as 'char c [9]'
+  char c[] = "Leonardo";
+       ^
+..\src\main.cpp:15:7: warning: unused variable 'c' [-Wunused-variable]
+08:58:22 **** Incremental Build of configuration Debug for project Pessoa ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.cpp" 
+..\src\main.cpp: In function 'int main()':
+..\src\main.cpp:15:7: warning: unused variable 'c' [-Wunused-variable]
+  char c[] = "Leonardo";
+       ^
+g++ -o Pessoa.exe "src\\Pessoa.o" "src\\main.o" 
+src\main.o: In function `main':
+C:\Users\Leonardo D. Batista\Desktop\workspace-cpp\Pessoa\Debug/../src/main.cpp:14: undefined reference to `Pessoa::~Pessoa()'
+C:\Users\Leonardo D. Batista\Desktop\workspace-cpp\Pessoa\Debug/../src/main.cpp:14: undefined reference to `Pessoa::~Pessoa()'
+collect2.exe: error: ld returned 1 exit status
+08:59:17 **** Incremental Build of configuration Debug for project Pessoa ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pessoa.o" "..\\src\\Pessoa.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.cpp" 
+..\src\main.cpp: In function 'int main()':
+..\src\main.cpp:16:4: error: invalid use of 'Pessoa::Pessoa'
+  p.Pessoa(c);
+    ^
+08:59:42 **** Incremental Build of configuration Debug for project Pessoa ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.cpp" 
+..\src\main.cpp: In function 'int main()':
+..\src\main.cpp:16:4: error: invalid use of 'Pessoa::Pessoa'
+  p.Pessoa(c);
+    ^
+09:00:43 **** Incremental Build of configuration Debug for project Pessoa ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.cpp" 
+..\src\main.cpp: In function 'int main()':
+..\src\main.cpp:15:7: warning: unused variable 'c' [-Wunused-variable]
+  char c[] = "Leonardo";
+       ^
+g++ -o Pessoa.exe "src\\Pessoa.o" "src\\main.o" 
+09:01:04 **** Incremental Build of configuration Debug for project Pessoa ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.cpp" 
+g++ -o Pessoa.exe "src\\Pessoa.o" "src\\main.o" 
