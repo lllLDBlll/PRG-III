@@ -1,7 +1,0 @@
-09:01:04 **** Incremental Build of configuration Debug for project Pessoa ****
-Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.cpp" 
-g++ -o Pessoa.exe "src\\Pessoa.o" "src\\main.o" 
-
-09:01:07 Build Finished. 0 errors, 0 warnings. (took 2s.266ms)
-
