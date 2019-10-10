@@ -34,5 +34,14 @@ int main()
 
     //cout<<"Hello World";
 
+	Pessoa p;
+	char c[] = "Leonardo";
+	p = Pessoa(c);
+	p.setIdade(24);
+	p.setAltura(1.81);
+	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
+	p.printDados();
+	system("pause");
+
     return 0;
 }
