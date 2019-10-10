@@ -1,5 +1,5 @@
 //============================================================================
-// Name        : Pessoa.cpp
+// Name        : Vehicle.cpp
 // Project     : Tarefa_01_Agenda.h
 // Author      : Leonardo D. Batista
 // Version     :
@@ -7,66 +7,88 @@
 // Description : Hello World in C++, Ansi-style
 //============================================================================
 
-#ifndef PESSOA_CPP_
-#define PESSOA_CPP_
+#ifndef VEHICLE_CPP_
+#define VEHICLE_CPP_
 
 #include "Vehicle.h"
 
-Pessoa::Pessoa(){
-	//nome = 0;		//Syntax warning
-	idade = 0;		//Syntax warning
-	altura = 0;		//Syntax warning
+/*ESCOPO
+Motor
+- Potencia em hp
+Taxa de consumo fixa km/litro
+taque de combustivel
+- comando: avançar em km, se a pressao de mais de um pneu estiver
+abaixo de 20 lb  o consumo do veiculo aumenta 30%
+se nao houver combusivel suficiente o veiculo avanca ate o tanque
+esvaziar
+
+Tanque
+- Capacidade maxima litros
+- quantidade atual litros
+- comando: pode ser abastecido com uma quantidade limitdo a sua maxima
+
+Pneu
+- cada pneu tem uma perssao em lb
+- Pode ser calibrado com uma pressao positiva ou negativa sendo somada a atual
+
+*/
+
+/*
+Vehicle::Vehicle(){
+	//nome = 0;
+	idade = 0;
+	altura = 0;
 };
 
-Pessoa::Pessoa(std::string n){
+Vehicle::Vehicle(std::string n){
 	nome = n;
 	idade = 0;		//Syntax warning
 	altura = 0; 	//Syntax warning
 }
 
-Pessoa::Pessoa(std::string n, short i){
+Vehicle::Vehicle(std::string n, short i){
 	nome = n;
 	idade = i;
 	altura = 0;
 }
 
-Pessoa::Pessoa(std::string n, short i, float a){
+Vehicle::Vehicle(std::string n, short i, float a){
 	nome = n;
 	idade = i;
 	altura = a;
 }
 
-Pessoa::~Pessoa(){};
+Vehicle::~Vehicle(){};
 
-void Pessoa::setNome(std::string n){
+void Vehicle::setNome(std::string n){
 	nome = n;
 }
 
-void Pessoa::setIdade(short i){
+void Vehicle::setIdade(short i){
 	idade = i;
 }
 
-void Pessoa::setAltura(float a){
+void Vehicle::setAltura(float a){
 	altura = a;
 }
 
-std::string Pessoa::getNome(){
+std::string Vehicle::getNome(){
 	return nome;
 }
 
-int Pessoa::getIdade(){
+int Vehicle::getIdade(){
 	return idade;
 }
 
-float Pessoa::getAltura(){
+float Vehicle::getAltura(){
 	return altura;
 }
 
-void Pessoa::printDados(){
+void Vehicle::printDados(){
 	std::cout << "Print de Dados" << std::endl;
 	std::cout << nome << std::endl;
 	std::cout << idade << std::endl;
 	std::cout << altura << std::endl;
 }
-
-#endif /* PESSOA_CPP_*/
+*/
+#endif /* VEHICLE_CPP_*/
