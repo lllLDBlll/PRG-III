@@ -7,15 +7,17 @@
 // Description : Hello World in C++, Ansi-style
 //============================================================================
 #include <iostream>
+#include <string>
 #include "Pessoa.h"
 #define N 10
+
 class Agenda {
 	Pessoa Povo[N];
 	public:
 		Agenda();
-		void armazenaPessoa(char *nome, int idade, float altura);
-		void removePessoa(char *nome);
-		int buscaPessoa(char *nome);
+		void armazenaPessoa(std::string nome, int idade, float altura);
+		void removePessoa(std::string nome);
+		int buscaPessoa(std::string nome);
 		void imprimePovo();
 		void imprimePessoa(int i);
 		//

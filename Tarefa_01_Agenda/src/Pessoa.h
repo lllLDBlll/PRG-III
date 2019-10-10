@@ -16,12 +16,14 @@ class Pessoa {
 		// seção de atributos e métodos públicos
 		// e construtores e destrutores da classe
 		Pessoa(); // construtor padrão
-		Pessoa(char* n); // construtor alternativo
-		Pessoa(char* n, short i); // construtor alternativo
-		Pessoa(char* n, short i, float a); // construtor alternativo
+		Pessoa(std::string n); // construtor alternativo
+		Pessoa(std::string n, short i); // construtor alternativo
+		Pessoa(std::string n, short i, float a); // construtor alternativo
 		~Pessoa(); // destrutor começa com “~”
+		void setNome(std::string n);
 		void setIdade(short i);
 		void setAltura(float a);
+		std::string getNome();
 		int getIdade();
 		float getAltura();
 		void printDados();
@@ -31,7 +33,7 @@ class Pessoa {
 
 	private:
 		// seção de atributos e métodos privados
-		char* nome;// = NULL;
+		std::string nome;// = NULL;
 		short idade;// = 0;
 		float altura;// = 0;
 };
