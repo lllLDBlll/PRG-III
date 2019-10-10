@@ -1,12 +1,15 @@
 //============================================================================
 // Name        : Pessoa.cpp
+// Project     : Tarefa_01_Agenda.h
 // Author      : Leonardo D. Batista
 // Version     :
-// Copyright   : All rights reserved to me 
+// Copyright   : All rigths reserved for IFSC
 // Description : Hello World in C++, Ansi-style
 //============================================================================
 
-#include <iostream>
+#ifndef PESSOA_CPP_
+#define PESSOA_CPP_
+
 #include "Pessoa.h"
 
 Pessoa::Pessoa(){
@@ -65,3 +68,5 @@ void Pessoa::printDados(){
 	std::cout << idade << std::endl;
 	std::cout << altura << std::endl;
 }
+
+#endif /* PESSOA_CPP_*/

@@ -20,9 +20,8 @@ int main()
 	A.armazenaPessoa("Abel", 22, 1.78);
 	A.armazenaPessoa("Tiago", 20, 1.80);
 	A.imprimePovo();
-	A.imprimePovo();
 	cout << linha;
-	
+
 	int posicao = A.buscaPessoa("Tiago");
 	if (posicao > 0)
 		A.imprimePessoa(posicao);
@@ -32,15 +31,6 @@ int main()
 	A.imprimePovo();
 	cout << linha;
 
-    //cout<<"Hello World";
-
-	Pessoa p;
-	char c[] = "Leonardo";
-	p = Pessoa(c);
-	p.setIdade(24);
-	p.setAltura(1.81);
-	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
-	p.printDados();
 	system("pause");
 
     return 0;

@@ -1,9 +1,11 @@
-/*
- * Pessoa.h
- *
- *  Created on: 30 de ago de 2019
- *      Author: Leonardo D. Batista
- */
+//============================================================================
+// Name        : Pessoa.h
+// Project     : Tarefa_01_Agenda.h
+// Author      : Leonardo D. Batista
+// Version     :
+// Copyright   : All rigths reserved for IFSC
+// Description : Hello World in C++, Ansi-style
+//============================================================================
 
 #ifndef PESSOA_H_
 #define PESSOA_H_
@@ -37,8 +39,5 @@ class Pessoa {
 		short idade;// = 0;
 		float altura;// = 0;
 };
-
-
-
 
 #endif /* PESSOA_H_ */

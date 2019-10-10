@@ -6,11 +6,15 @@
 // Copyright   : All rigths reserved for IFSC
 // Description : Hello World in C++, Ansi-style
 //============================================================================
-//#include <iostream>
-//#include <string>
+
+#ifndef AGENDA_CPP_
+#define AGENDA_CPP_
+
 #include "Agenda.h"
 
-Agenda::Agenda(){}
+Agenda::Agenda(){
+	x = 0; // Error syntax
+}
 
 void Agenda::armazenaPessoa(std::string nome, int idade, float altura){
 	Povo[i].setNome(nome);
@@ -20,14 +24,50 @@ void Agenda::armazenaPessoa(std::string nome, int idade, float altura){
 }
 
 void Agenda::removePessoa(std::string nome){
-	while(1){
-		std::string tmp = Povo[i].getNome();
-		if (nome.compare(tmp) == 0)
-			std::cout << "still, " << tmp << " is an apple\n";
+	int n = buscaPessoa(nome);
+	Povo[n].setNome("");
+	std::cout <<"... and deleted\n";
+}
+
+int Agenda::buscaPessoa(std::string nome){
+	std::string tmp;
+	i = 0;
+	while(i < N){
+		//std::cout << "i: "<< i << "\n";
+		tmp = Povo[i].getNome();
+		if (nome.compare(tmp) == 0){
+			std::cout << tmp << " has found\n";
+			return i;
+		}
+		i++;
+	}
+	std::cout << tmp << " hasn't found\n";
+	return -1; // Fail
+}
+
+void Agenda::imprimePovo(){
+	std::string tmp;
+	i = 0;
+	std::cout << "\nPrint People...\n";
+	while(i < N){
+		tmp = Povo[i].getNome();
+		if (!tmp.empty()){
+			std::cout << "P" << i << ": " << Povo[i].getNome() << "\n";
+		}
+		i++;
+	}
+	std::cout << "...Finished!\n";
+}
+
+void Agenda::imprimePessoa(int i){
+	std::string tmp = Povo[i].getNome();
+	if (tmp.empty()){
+		std::cout << "\nIt's Empty!!! \n";
+	}else{
+		std::cout << "\nPrint Guy: " << tmp << "\n";
 	}
 }
 
-int Agenda::buscaPessoa(std::string nome){}
-void Agenda::imprimePovo(){}
-void Agenda::imprimePessoa(int i){}
 Agenda::~Agenda(){}
+
+#endif /* AGENDA_CPP_ */

@@ -6,6 +6,10 @@
 // Copyright   : All rigths reserved for IFSC
 // Description : Hello World in C++, Ansi-style
 //============================================================================
+
+#ifndef AGENDA_H_
+#define AGENDA_H_
+
 #include <iostream>
 #include <string>
 #include "Pessoa.h"
@@ -28,3 +32,5 @@ class Agenda {
 	private:
 		int i = 0; //interador de pessoas
 };
+
+#endif /* AGENDA_H_ */
