@@ -15,8 +15,11 @@ using namespace std;
 int main()
 {
 	Vehicle V;
-	Vehicle::tire_t t = {1, 2, 3, 4};
-	V.init(1,1,1,1,1,1,1,t);
+	V.init(1,1,200,9,8,7,6);
+	V.CalibTire(10,10,10,10);
+	V.FillTank(-10);
+	V.FillTank(20);
+
 	//V.pneu_t = 0;
 /*
 	char linha[] = "------------------------------------------------\n";

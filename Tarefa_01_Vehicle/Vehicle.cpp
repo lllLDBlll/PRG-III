@@ -35,75 +35,57 @@ Pneu
 
 Vehicle::Vehicle(){};
 
-void Vehicle::init(int pw, float r, int tm, char fl, char fr, char rl, char rr, tire_t t){
+void Vehicle::init(int pw, float r, int tm, int fl, int fr, int rl, int rr){
 	power = pw;
 	rate = r;
-	tank_max = tm;
-	tank_now = tm;
-	//front_left = fl;
-	//front_right = fr;
-	//rear_left = rl;
-	//rear_right = rr;
-	amor = 1;
-	tire_save = t;
+	tank_max = tm; //Tank Max Set
+	FillTank(tm);
+	CalibTire(fl, fr, rl, rr); // Call CalibTire for Calibration
 	std::cout << "Print de Dados" << std::endl;
-	std::cout << tire_save.front_left << std::endl;
-	std::cout << tire_save.front_right << std::endl;
+	std::cout << power << std::endl;
+	std::cout << rate << std::endl;
+	std::cout << tank_max << std::endl;
+	std::cout << tank_now << std::endl;
+	std::cout << tank_max << std::endl;
 };
 
 void Vehicle::Move(int d){
 	dist = dist + d;
 };
 
-void Vehicle::FillTank(short ft){
-	//tank_now = tank_now;
-	//if (tank_now == 0)
-		//return 0;
+int Vehicle::FillTank(short ft){
+
+	tank_now = tank_now + ft;
+
+	if (tank_now >= tank_max){
+		tank_now = tank_max;
+		std::cout << "Full Gas" << std::endl;
+		return 0;
+	}
+
+	if (tank_now <= 0){
+		std::cout << "Without Gas" << std::endl;
+		return 0;
+	}
 };
 
-void Vehicle::CalibTire(short ct){
-	/*struct tire{
-		/*uint8_t*//*char front_left, front_right, rear_left, rear_right;
-	};*/
-	//tire_t = t;
+void Vehicle::CalibTire(int fl, int fr, int rl, int rr){
+	//if one
+	tire_t.front_left = tire_t.front_left + fl;
+	tire_t.front_right = tire_t.front_right + fr;
+	tire_t.rear_left = tire_t.rear_left + rl;
+	tire_t.rear_right = tire_t.rear_right + rr;
+
+	std::cout << "Tires Pressure Updated" << std::endl;
+	std::cout << tire_t.front_left << std::endl;
+	std::cout << tire_t.front_right << std::endl;
+	std::cout << tire_t.rear_left << std::endl;
+	std::cout << tire_t.rear_right << std::endl;
 };
 
 void Vehicle::printDatas(){
 
 };
-
-/*
-void Vehicle::setNome(std::string n){
-	nome = n;
-}
-
-void Vehicle::setIdade(short i){
-	idade = i;
-}
-
-void Vehicle::setAltura(float a){
-	altura = a;
-}
-
-std::string Vehicle::getNome(){
-	return nome;
-}
-
-int Vehicle::getIdade(){
-	return idade;
-}
-
-float Vehicle::getAltura(){
-	return altura;
-}
-
-void Vehicle::printDados(){
-	std::cout << "Print de Dados" << std::endl;
-	std::cout << nome << std::endl;
-	std::cout << idade << std::endl;
-	std::cout << altura << std::endl;
-}
-*/
 
 Vehicle::~Vehicle(){};
 #endif /* VEHICLE_CPP_*/
