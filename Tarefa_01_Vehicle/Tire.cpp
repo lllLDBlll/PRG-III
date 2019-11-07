@@ -12,6 +12,8 @@
 
 #include "Tire.h"
 
-
-
+Tire::Tire(){};
+Tire::Tire(int fl, int fr, int rl, int rr){};
+void Tire::printDatas(){};
+Tire::~Tire(){};
 #endif /* TIRE_CPP_ */

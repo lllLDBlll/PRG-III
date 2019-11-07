@@ -15,10 +15,11 @@ using namespace std;
 int main()
 {
 	Vehicle V;
-	V.init(1,1,200,9,8,7,6);
+/*	V.init(1,1,200,9,8,7,6);
 	V.CalibTire(10,10,10,10);
 	V.FillTank(-10);
 	V.FillTank(20);
+*/
 
 	//V.pneu_t = 0;
 /*

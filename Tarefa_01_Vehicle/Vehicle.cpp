@@ -34,7 +34,7 @@ Pneu
 */
 
 Vehicle::Vehicle(){};
-
+/*
 void Vehicle::init(int pw, float r, int tm, int fl, int fr, int rl, int rr){
 	power = pw;
 	rate = r;
@@ -49,40 +49,7 @@ void Vehicle::init(int pw, float r, int tm, int fl, int fr, int rl, int rr){
 	std::cout << tank_max << std::endl;
 };
 
-void Vehicle::Move(int d){
-	dist = dist + d;
-};
-
-int Vehicle::FillTank(short ft){
-
-	tank_now = tank_now + ft;
-
-	if (tank_now >= tank_max){
-		tank_now = tank_max;
-		std::cout << "Full Gas" << std::endl;
-		return 0;
-	}
-
-	if (tank_now <= 0){
-		std::cout << "Without Gas" << std::endl;
-		return 0;
-	}
-};
-
-void Vehicle::CalibTire(int fl, int fr, int rl, int rr){
-	//if one
-	tire_t.front_left = tire_t.front_left + fl;
-	tire_t.front_right = tire_t.front_right + fr;
-	tire_t.rear_left = tire_t.rear_left + rl;
-	tire_t.rear_right = tire_t.rear_right + rr;
-
-	std::cout << "Tires Pressure Updated" << std::endl;
-	std::cout << tire_t.front_left << std::endl;
-	std::cout << tire_t.front_right << std::endl;
-	std::cout << tire_t.rear_left << std::endl;
-	std::cout << tire_t.rear_right << std::endl;
-};
-
+*/
 void Vehicle::printDatas(){
 
 };

@@ -9,39 +9,20 @@
 
 #ifndef VEHICLE_H_
 #define VEHICLE_H_
-#define P 4 // Four pneus
 
 // inclusão de headers de arquivos e bibliotecas
 #include <iostream> // incluir uma biblioteca
 
 class Vehicle {
 	public:
-		struct tire{
-			int front_left;
-			int front_right;
-			int rear_left;
-			int rear_right;
-		};
-
-		//typedef struct tire tire_t;
-		tire tire_t = {0,0,0,0};
-		//tire_t *tire_saved;
-
 		// seção de atributos e métodos públicos
 		// e construtores e destrutores da classe
 		Vehicle(); // construtor padrão
 		/*Vehicle(int p); // construtor alternativo
 		...
 		*/
-		void init(int pw, float r, int tm, int fl, int fr, int rl, int rr); // construtor alternativo
-		void Move(int d);
-		int FillTank(short ft);
-		void CalibTire(int fl, int fr, int rl, int rr);
-		std::string getNome();
 		void printDatas();
 
-		//char front_left, front_right, rear_left, rear_right;
-		int amor = 0;
 		~Vehicle(); // destrutor começa com “~”
 	protected:
 		// seção de atributos e métodos protegidos
