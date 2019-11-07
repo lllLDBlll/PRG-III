@@ -14,6 +14,10 @@ using namespace std;
 
 int main()
 {
+	Vehicle V;
+	Vehicle::tire_t t = {1, 2, 3, 4};
+	V.init(1,1,1,1,1,1,1,t);
+	//V.pneu_t = 0;
 /*
 	char linha[] = "------------------------------------------------\n";
 	Agenda A;

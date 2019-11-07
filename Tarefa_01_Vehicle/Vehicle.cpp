@@ -33,33 +33,46 @@ Pneu
 
 */
 
-/*
-Vehicle::Vehicle(){
-	//nome = 0;
-	idade = 0;
-	altura = 0;
+Vehicle::Vehicle(){};
+
+void Vehicle::init(int pw, float r, int tm, char fl, char fr, char rl, char rr, tire_t t){
+	power = pw;
+	rate = r;
+	tank_max = tm;
+	tank_now = tm;
+	//front_left = fl;
+	//front_right = fr;
+	//rear_left = rl;
+	//rear_right = rr;
+	amor = 1;
+	tire_save = t;
+	std::cout << "Print de Dados" << std::endl;
+	std::cout << tire_save.front_left << std::endl;
+	std::cout << tire_save.front_right << std::endl;
 };
 
-Vehicle::Vehicle(std::string n){
-	nome = n;
-	idade = 0;		//Syntax warning
-	altura = 0; 	//Syntax warning
-}
+void Vehicle::Move(int d){
+	dist = dist + d;
+};
 
-Vehicle::Vehicle(std::string n, short i){
-	nome = n;
-	idade = i;
-	altura = 0;
-}
+void Vehicle::FillTank(short ft){
+	//tank_now = tank_now;
+	//if (tank_now == 0)
+		//return 0;
+};
 
-Vehicle::Vehicle(std::string n, short i, float a){
-	nome = n;
-	idade = i;
-	altura = a;
-}
+void Vehicle::CalibTire(short ct){
+	/*struct tire{
+		/*uint8_t*//*char front_left, front_right, rear_left, rear_right;
+	};*/
+	//tire_t = t;
+};
 
-Vehicle::~Vehicle(){};
+void Vehicle::printDatas(){
 
+};
+
+/*
 void Vehicle::setNome(std::string n){
 	nome = n;
 }
@@ -91,4 +104,6 @@ void Vehicle::printDados(){
 	std::cout << altura << std::endl;
 }
 */
+
+Vehicle::~Vehicle(){};
 #endif /* VEHICLE_CPP_*/
