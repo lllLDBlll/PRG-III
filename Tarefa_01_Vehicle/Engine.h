@@ -22,7 +22,9 @@ class Engine {
 	public:
 		Engine(); // construtor padrão
 		Engine(unsigned int p, float r); // construtor alternativo
-		void Forward(int d);
+		void setPower();
+		void Rate(int d);
+		float Rate();
 		void printDatas();
 		~Engine(); // destrutor começa com “~”
 	protected:
