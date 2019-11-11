@@ -32,6 +32,7 @@ class Tire {
 			int rear_right;
 		};
 		tire tire_t = {0,0,0,0};
+		bool low_pressure = 0;
 		//int pneu[P];	// pneu pressure in lb pneu[0,1] = Front(Left, Right), pneu[2,3] = Rear(Left, Right)
 };
 
