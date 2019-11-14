@@ -18,11 +18,11 @@ Engine::Engine(unsigned int p, float r){
 	power = p;
 	rate = r;
 };
-
+/*
 void Engine::Forward(int d){
 	dist = dist + d;
 };
-
+*/
 void Engine::printDatas(){};
 
 Engine::~Engine(){};

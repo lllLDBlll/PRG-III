@@ -3,7 +3,7 @@
 // Project     : Tarefa_01_Agenda.h
 // Author      : Leonardo D. Batista
 // Version     :
-// Copyright   : All rigths reserved for IFSC
+// Copyright   : All rights reserved for IFSC
 // Description : Hello World in C++, Ansi-style
 //============================================================================
 
@@ -33,7 +33,21 @@ Pneu
 
 */
 
-Vehicle::Vehicle(){};
+Vehicle::Vehicle(){
+	T = Tire();
+	TK = Tank();
+};
+
+Vehicle::Vehicle(int fl, int fr, int rl, int rr){
+	T = Tire(fl, fr, rl, rr);
+};
+
+Vehicle::Vehicle(int fl, int fr, int rl, int rr, int m, float n){
+	T = Tire(fl, fr, rl, rr);
+	TK = Tank(m, n);
+	printDatas();
+};
+
 /*
 void Vehicle::init(int pw, float r, int tm, int fl, int fr, int rl, int rr){
 	power = pw;
@@ -50,8 +64,46 @@ void Vehicle::init(int pw, float r, int tm, int fl, int fr, int rl, int rr){
 };
 
 */
-void Vehicle::printDatas(){
+int Vehicle::Calib(int fl, int fr, int rl, int rr){
+	T.tire[0] = T.tire[0] + fl;
+	T.tire[1] = T.tire[1] + fr;
+	T.tire[2] = T.tire[2] + rl;
+	T.tire[3] = T.tire[3] + rr;
+	T.check();
+}
 
+int Vehicle::Calib(int index, int p){
+	switch(index){
+	case 0:
+		T.tire[0] = T.tire[0] + p;
+		break;
+	case 1:
+		T.tire[1] = T.tire[1] + p;
+		break;
+	case 2:
+		T.tire[2] = T.tire[2] + p;
+		break;
+	case 3:
+		T.tire[3] = T.tire[3] + p;
+		break;
+	default:
+		break;
+	}
+	T.check();
+}
+
+int Vehicle::FillTank(short ft){
+	TK.now = TK.now + ft;
+	if (TK.now > TK.max)
+		TK.now = TK.max;
+	printDatas();
+	return 0;
+};
+
+
+void Vehicle::printDatas(){
+	std::cout << TK.now << std::endl;
+	std::cout << TK.max << std::endl;
 };
 
 Vehicle::~Vehicle(){};

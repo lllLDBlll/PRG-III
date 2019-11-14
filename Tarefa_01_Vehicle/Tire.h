@@ -3,7 +3,7 @@
 // Project     : Tarefa_01_Agenda.h
 // Author      : Leonardo D. Batista
 // Version     :
-// Copyright   : All rigths reserved for IFSC
+// Copyright   : All rights reserved for IFSC
 // Description : Hello World in C++, Ansi-style
 //============================================================================
 
@@ -21,18 +21,21 @@ class Tire {
 		Tire(); // construtor padrão
 		Tire(int fl, int fr, int rl, int rr);
 		void printDatas();
+		void check();
 		~Tire(); // destrutor começa com “~”
-	protected:
-		// seção de atributos e métodos protegidos
-	private:
-		struct tire{
+		/*struct tire{
 			int front_left;
 			int front_right;
 			int rear_left;
 			int rear_right;
 		};
 		tire tire_t = {0,0,0,0};
+		*/
+		int tire[4] = {0,0,0,0};
 		bool low_pressure = 0;
+	protected:
+		// seção de atributos e métodos protegidos
+	private:
 		//int pneu[P];	// pneu pressure in lb pneu[0,1] = Front(Left, Right), pneu[2,3] = Rear(Left, Right)
 };
 

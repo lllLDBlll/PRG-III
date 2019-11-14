@@ -3,7 +3,7 @@
 // Project     : Tarefa_01_Agenda.h
 // Author      : Leonardo D. Batista
 // Version     :
-// Copyright   : All rigths reserved for IFSC
+// Copyright   : All rights reserved for IFSC
 // Description : Hello World in C++, Ansi-style
 //============================================================================
 
@@ -12,17 +12,26 @@
 
 // inclusão de headers de arquivos e bibliotecas
 #include <iostream> // incluir uma biblioteca
+#include "Engine.h"
+#include "Tank.h"
+#include "Tire.h"
 
 class Vehicle {
 	public:
+		Tire T;
+		Tank TK;
 		// seção de atributos e métodos públicos
 		// e construtores e destrutores da classe
 		Vehicle(); // construtor padrão
 		/*Vehicle(int p); // construtor alternativo
 		...
 		*/
+		Vehicle(int fl, int fr, int rl, int rr);
+		Vehicle(int fl, int fr, int rl, int rr, int m, float n);
+		int Calib(int fl, int fr, int rl, int rr);
+		int Calib(int index, int p);
+		int FillTank(short ft);
 		void printDatas();
-
 		~Vehicle(); // destrutor começa com “~”
 	protected:
 		// seção de atributos e métodos protegidos
@@ -34,7 +43,8 @@ class Vehicle {
 		int tank_max;	// in litre
 		float tank_now = 0;	// in litre
 		int dist = 0;		// distance in km
-		//int pneu[P];	// pneu pressure in lb pneu[0,1] = Front(Left, Right), pneu[2,3] = Rear(Left, Right)
+		//enum Tires {front_left, front_right, rear_left, rear_right};
+		//int tire[P];	// tire pressure in lb tire[0,1] = Front(Left, Right), tire[2,3] = Rear(Left, Right)
 };
 
 #endif /* VEHICLE_H_ */

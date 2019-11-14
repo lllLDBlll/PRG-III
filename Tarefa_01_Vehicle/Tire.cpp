@@ -3,7 +3,7 @@
 // Project     : Tarefa_01_Agenda.h
 // Author      : Leonardo D. Batista
 // Version     :
-// Copyright   : All rigths reserved for IFSC
+// Copyright   : All rights reserved for IFSC
 // Description : Hello World in C++, Ansi-style
 //============================================================================
 
@@ -15,23 +15,26 @@
 Tire::Tire(){};
 
 Tire::Tire(int fl, int fr, int rl, int rr){
-	int *ptr = &tire_t.front_left;
-	*ptr++ = fl;
-	*ptr++ = fr;
-	*ptr++ = rl;
-	*ptr = rr;
+	tire[0] = fl; tire[1] = fr; tire[2] = rl; tire[3] = rr;
+	check();
+};
+
+void Tire::check(){
 	short tmp = 0;
 	for(int i = 0; i < 4; i++){
-		std::cout << *ptr << std::endl;
-		if(*ptr-- < 20)
+		if(tire[i] < 20)
 			tmp++;
 	}
 	if(tmp >= 2){
 		low_pressure = 1; //set Low Pressure Flag
+	}else{
+		low_pressure = 0;
 	}
-};
+	printDatas();
+}
 
 void Tire::printDatas(){
+	/*
 	int *ptr = &tire_t.front_left;
 	std::cout << "Print Tire Values" << std::endl;
 	std::cout << ": " << tire_t.front_left << std::endl;
@@ -39,9 +42,9 @@ void Tire::printDatas(){
 	std::cout  << ": " << tire_t.rear_left << std::endl;
 	std::cout  << ": " << tire_t.rear_right << std::endl;
 	for(int i = 0; i < 4; i++){
-		//std::cout << i+1 << ": " << tire_t.front_right << std::endl;
 	}
-	std::cout << "Flag: " << low_pressure << *ptr << std::endl;
+	*/
+	std::cout << "Flag: " << low_pressure << std::endl;
 };
 
 Tire::~Tire(){};
